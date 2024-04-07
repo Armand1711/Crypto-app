@@ -1,20 +1,16 @@
-import React from 'react'; // Import React only once
-
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ComparisonPage from './ComparisonPage';
 import TimelinePage from './TimelinePage';
 import LandingDashboard from './LandingDashboard';
-import './styles.css'; // Import the styles.css file
+import './styles.css';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <header className="header">
-          <h1>Crypto App</h1>
-        </header>
+      <div style={{ backgroundColor: 'black' }}>
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingDashboard />} />

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import axios from 'axios';
+import backgroundImage from './Background.jpg';
+import './LandingDashboard.css'; 
 
 const LandingDashboard = () => {
   const [topCoins, setTopCoins] = useState([]);
@@ -29,31 +31,37 @@ const LandingDashboard = () => {
   }, []);
 
   return (
-    <div className="page">
-      <h2>Top 5 Coins</h2>
-      <div className="chart-container">
-        <BarChart
-          width={800}
-          height={400}
-          data={topCoins}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar
-            dataKey="current_price"
-            name="Price (USD)"
-            fill="#8884d8"
-          />
-        </BarChart>
+    <div className="landing-dashboard" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div>
+        <h2>Welcome to CryptoGraph</h2>
+        <p>This is a comprehensive platform for tracking cryptocurrency data. On this landing page, you can view the top 5 cryptocurrencies by current price.</p>
+      </div>
+      <div className="page">
+        <h2>Top 5 Coins</h2>
+        <div className="chart-container">
+          <BarChart
+            width={800}
+            height={400}
+            data={topCoins}
+            margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar
+              dataKey="current_price"
+              name="Price (USD)"
+              fill="#8884d8"
+            />
+          </BarChart>
+        </div>
       </div>
     </div>
   );
