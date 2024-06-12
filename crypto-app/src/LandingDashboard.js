@@ -34,7 +34,7 @@ const LandingDashboard = () => {
     <div className="landing-dashboard" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div>
         <h2>Welcome to CryptoGraph</h2>
-        <p>This is a comprehensive platform for tracking cryptocurrency data. On this landing page, you can view the top 5 cryptocurrencies by current price.</p>
+        <p>CryptoGraph is your go-to platform for comprehensive cryptocurrency tracking and analysis. Here, you can find real-time data on various cryptocurrencies, detailed charts, and insights to help you make informed decisions. Our platform offers an in-depth look at market trends, price changes, and the overall performance of the cryptocurrency market. With CryptoGraph, you can explore the latest trends, track your favorite coins, and stay updated with the top-performing cryptocurrencies. Whether you are a seasoned trader or just starting out, our user-friendly interface and robust data will provide you with everything you need to navigate the dynamic world of cryptocurrencies.</p>
       </div>
       <div className="page">
         <h2>Top 5 Coins</h2>
